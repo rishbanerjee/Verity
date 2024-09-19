@@ -1,0 +1,76 @@
+/* Container for the Recent News section */
+.recent-news {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 34px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border: 1px solid black; /* 1px black border */
+    box-sizing: border-box;
+}
+
+/* Heading for Recent News */
+.recent-news h3 {
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Container for news items */
+.news-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    gap: 20px; /* Space between items */
+}
+
+/* Individual news cards */
+.news-item {
+    background-color: #f8f8f8;
+    border-radius: 24px; /* Rounded corners for the card */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    width: 166px; /* Three items per row */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Upper half of the card: image */
+.news-item-image img {
+    width: 100%;
+    height: 150px; /* Fixed height for images */
+    object-fit: cover; /* Ensure image fits the container */
+}
+
+/* Lower half of the card: text */
+.news-item-text {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+/* News title styling */
+.news-item-text p {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+}
+
+/* Hover effect on news items */
+.news-item:hover {
+    background-color: #e6e6e6;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .news-item {
+        width: calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .news-item {
+        width: 100%; /* One item per row on very small screens */
+    }
+}
